@@ -1,0 +1,15 @@
+{
+  "item.randomod.secret_item": "Secret Item",
+  "item.randomod.secret_fuel": "Secret Fuel",
+  "item.randomod.secret_food": "Secret Food",
+  "item.randomod.secret_sword": "Secret Sword",
+  "item.randomod.secret_boots": "Secret Boots",
+  "item.randomod.secret_helmet": "Secret Helmet",
+  "item.randomod.secret_leggings": "Secret Leggings",
+  "item.randomod.secret_chestplate": "Secret Chestplate",
+  "itemGroup.randomod": "RandoMod ItemGroup",
+  "enchantment.randomod.thundering": "Thundering",
+  "effect.randomod.man": "Man",
+  "advancements.randomod.getSecretItem": "Get Secret Item",
+  "advancements.randomod.getSecretItem.description": "Fuel is Infinity!"
+}

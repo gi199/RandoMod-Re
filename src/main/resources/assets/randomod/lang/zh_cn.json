@@ -1,0 +1,15 @@
+{
+  "item.randomod.secret_item": "神秘物品",
+  "item.randomod.secret_fuel": "神秘燃料",
+  "item.randomod.secret_food": "神秘食物",
+  "item.randomod.secret_sword": "神秘剑",
+  "item.randomod.secret_boots": "神秘靴子",
+  "item.randomod.secret_helmet": "神秘头盔",
+  "item.randomod.secret_leggings": "神秘护腿",
+  "item.randomod.secret_chestplate": "神秘胸甲",
+  "itemGroup.randomod": "RandoMod 物品组",
+  "enchantment.randomod.thundering": "雷鸣",
+  "effect.randomod.man": "牢大",
+  "advancements.randomod.getSecretItem": "获取[神秘物品]",
+  "advancements.randomod.getSecretItem.description": "资源自由"
+}
