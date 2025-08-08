@@ -6,12 +6,14 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
 public class RandoModClient implements ClientModInitializer {
-    @Override
-    public void onInitializeClient() {
-        // This entrypoint is suitable for setting up client-specific logic, such as rendering.
-        MinecraftClient.getInstance().setScreen(
-                new SimpleGUI(Text.empty())
-        );
-
-    }
+   @Override
+   public void onInitializeClient() {
+       // 使用延迟任务来确保客户端完全初始化
+       MinecraftClient client = MinecraftClient.getInstance();
+       client.execute(() -> {
+           if (client.player != null) {
+               client.setScreen(new SimpleGUI(Text.empty()));
+           }
+       });
+   }
 }

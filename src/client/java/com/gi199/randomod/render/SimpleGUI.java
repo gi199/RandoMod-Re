@@ -7,27 +7,34 @@ import net.minecraft.client.toast.SystemToast;
 import net.minecraft.text.Text;
 
 public class SimpleGUI extends Screen {
-    public SimpleGUI(Text title) {
-        super(title);
-    }
-
+    public SimpleGUI(Text title) {super(title);}
     @Override
     protected void init() {
         ButtonWidget buttonWidget = ButtonWidget.builder(Text.of("Hello World"), (btn) -> {
-            // When the button is clicked, we can display a toast to the screen.
-            this.client.getToastManager().add(
-                    SystemToast.create(this.client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("Hello World!"), Text.of("This is a toast."))
-            );
+            // 使用 MinecraftClient.getInstance() 获取实例
+            if (this.client != null) {
+                // 显示 Toast
+                this.client.getToastManager().add(
+                    SystemToast.create(this.client, SystemToast.Type.NARRATOR_TOGGLE,
+                        Text.of("Hello World!"), Text.of("This is a toast."))
+                );
+
+                // 直接关闭屏幕，让 Minecraft 自己处理鼠标状态
+                this.close();
+            }
         }).dimensions(40, 40, 120, 20).build();
-        // x, y, width, height
-        // It's recommended to use the fixed height of 20 to prevent rendering issues with the button
-        // textures.
 
-        // Register the button widget.
         this.addDrawableChild(buttonWidget);
-
     }
 
+    @Override
+    public void close() {
+        // 让父类处理关闭逻辑
+        super.close();
+        if (this.client != null) {
+            this.client.setScreen(null);
+        }
+    }
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         super.render(context, mouseX, mouseY, delta);
