@@ -8,7 +8,6 @@ import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 import net.minecraft.registry.Registries;
@@ -31,7 +30,7 @@ public class ItemClasses {
     public static final Item SECRET_ITEM = register("secret_item", Item::new, new Item.Settings());
     public static final Item SECRET_FUEL = register("secret_fuel", Item::new, new Item.Settings().maxCount(128));
     public static final Item SECRET_FOOD = register("secret_food", Item::new, new Item.Settings().food(FOOD_COMPONENT, FOOD_CONSUMABLE_COMPONENT));
-    public static final Item SECRET_SWORD = register("secret_sword", settings -> new SwordItem(SECRET_TOOL_MATERIAL, 1f, 1f, settings), new Item.Settings());
+    public static final Item SECRET_SWORD = register("secret_sword", settings -> new Item (settings.sword(SECRET_TOOL_MATERIAL, 1f, 1f)), new Item.Settings());
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.

@@ -2,7 +2,6 @@ package com.gi199.randomod.item;
 
 import com.gi199.randomod.RandoMod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
@@ -34,28 +33,10 @@ public class SecretArmorMaterial {
             null,
             SECRET_ARMOR_MATERIAL_KEY
     );
-    public static final Item SECRET_HELMET = register(
-            "secret_helmet",
-            settings -> new ArmorItem(SecretArmorMaterial.INSTANCE, EquipmentType.HELMET, settings),
-            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(SecretArmorMaterial.BASE_DURABILITY))
-    );
-    public static final Item SECRET_CHESTPLATE = register("secret_chestplate",
-            settings -> new ArmorItem(SecretArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, settings),
-            new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(SecretArmorMaterial.BASE_DURABILITY))
-    );
-
-    public static final Item SECRET_LEGGINGS = register(
-            "secret_leggings",
-            settings -> new ArmorItem(SecretArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, settings),
-            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(SecretArmorMaterial.BASE_DURABILITY))
-    );
-
-    public static final Item SECRET_BOOTS = register(
-            "secret_boots",
-            settings -> new ArmorItem(SecretArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
-            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(SecretArmorMaterial.BASE_DURABILITY))
-    );
-
+    public static final Item SECRET_HELMET = register("secret_helmet", settings -> new Item(settings.armor(SecretArmorMaterial.INSTANCE, EquipmentType.HELMET).maxDamage(SecretArmorMaterial.BASE_DURABILITY)),new Item.Settings());
+    public static final Item SECRET_CHESTPLATE = register("secret_chestplate", settings -> new Item(settings.armor(SecretArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE).maxDamage(SecretArmorMaterial.BASE_DURABILITY)), new Item.Settings());
+    public static final Item SECRET_LEGGINGS = register("secret_leggings", settings -> new Item(settings.armor(SecretArmorMaterial.INSTANCE, EquipmentType.LEGGINGS).maxDamage(SecretArmorMaterial.BASE_DURABILITY)), new Item.Settings());
+    public static final Item SECRET_BOOTS = register("secret_boots", settings -> new Item(settings.armor(SecretArmorMaterial.INSTANCE, EquipmentType.BOOTS).maxDamage(SecretArmorMaterial.BASE_DURABILITY)), new Item.Settings());
     public static void registerSecretArmor() {
         ItemGroupEvents.modifyEntriesEvent(RandoModItemGroup.RANDOMOD_ITEM_GROUP_KEY).register(itemGroup -> itemGroup.add(SecretArmorMaterial.SECRET_BOOTS));
         ItemGroupEvents.modifyEntriesEvent(RandoModItemGroup.RANDOMOD_ITEM_GROUP_KEY).register(itemGroup -> itemGroup.add(SecretArmorMaterial.SECRET_CHESTPLATE));
