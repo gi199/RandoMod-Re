@@ -11,6 +11,5 @@
   "enchantment.randomod.thundering": "Thundering",
   "effect.randomod.man": "Man",
   "advancements.randomod.getSecretItem": "Get Secret Item",
-  "advancements.randomod.getSecretItem.description": "Fuel is Infinity!",
-  "loaded.randomod": "RandoMod Loaded!"
+  "advancements.randomod.getSecretItem.description": "Fuel is Infinity!"
 }

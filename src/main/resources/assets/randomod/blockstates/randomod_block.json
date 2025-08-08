@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "randomod:block/randomod_block"
+    }
+  }
+}

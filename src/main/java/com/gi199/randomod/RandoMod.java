@@ -12,7 +12,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +32,7 @@ public class RandoMod implements ModInitializer {
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
 
-        LOGGER.info(String.valueOf(Text.translatable("loaded.randomod")));
+        LOGGER.info("Hello Fabric world!");
         ItemClasses.fuel();
         //
         Registry.register(Registries.ITEM_GROUP, RandoModItemGroup.RANDOMOD_ITEM_GROUP_KEY, RandoModItemGroup.RANDOMOD_ITEM_GROUP);
