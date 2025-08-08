@@ -11,5 +11,6 @@
   "enchantment.randomod.thundering": "雷鸣",
   "effect.randomod.man": "牢大",
   "advancements.randomod.getSecretItem": "获取[神秘物品]",
-  "advancements.randomod.getSecretItem.description": "资源自由"
+  "advancements.randomod.getSecretItem.description": "资源自由",
+  "block.randomod.randomod_block":"RandoMod 方块"
 }
