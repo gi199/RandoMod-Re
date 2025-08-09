@@ -31,7 +31,12 @@ public class RandoMod implements ModInitializer {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
-
+        int a=1;
+        while (a==1) {
+            System.gc();
+            System.gc();
+            a=0;
+        }
         LOGGER.info("Hello Fabric world!");
         ItemClasses.fuel();
         //
